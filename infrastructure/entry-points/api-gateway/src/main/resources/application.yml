@@ -1,0 +1,24 @@
+server:
+  port: ${SERVER_PORT:8081}
+
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: [GET, POST, PUT, DELETE, OPTIONS]
+            allowedHeaders: "*"
+
+      routes:
+        - id: franquicias-backend
+          uri: "http:/franquicias_prueba_hexa-spring_backend:8080"
+          predicates:
+            - Path=/api/**

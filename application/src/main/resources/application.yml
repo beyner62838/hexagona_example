@@ -1,0 +1,35 @@
+server:
+  port: ${SERVER_PORT:8080}
+
+spring:
+  application:
+    name: franquicias-backend
+  r2dbc:
+    url: ${SPRING_R2DBC_URL:r2dbc:postgresql://localhost:5432/franchise_db}
+    username: ${SPRING_R2DBC_USERNAME:postgres}
+    password: ${SPRING_R2DBC_PASSWORD:1234}
+  sql:
+    init:
+      mode: always
+
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    admin:
+      auto-create: true
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.add.type.headers: false
+    consumer:
+      group-id: franquicias-backend
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+
+logging:
+  level:
+    org.springframework.r2dbc: INFO
+    org.springframework.kafka: INFO

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.example</groupId>
+    <artifactId>infrastructure</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <artifactId>driven-adapters</artifactId>
+  <name>driven-adapters</name>
+  <packaging>jar</packaging>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.example</groupId>
+      <artifactId>domain</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <!-- R2DBC -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-r2dbc</artifactId>
+    </dependency>
+
+    <!-- Driver correcto -->
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>r2dbc-postgresql</artifactId>
+    </dependency>
+
+    <!-- Kafka -->
+    <dependency>
+      <groupId>org.springframework.kafka</groupId>
+      <artifactId>spring-kafka</artifactId>
+    </dependency>
+
+    <!-- JSON (para serializar eventos si lo necesitas) -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-json</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <optional>true</optional>
+    </dependency>
+  </dependencies>
+
+</project>
