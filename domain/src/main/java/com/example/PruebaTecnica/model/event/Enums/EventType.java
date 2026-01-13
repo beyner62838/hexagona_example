@@ -1,4 +1,4 @@
-package com.example.PruebaTecnica.model.event;
+package com.example.PruebaTecnica.model.event.Enums;
 
 public enum EventType {
     CREATED,

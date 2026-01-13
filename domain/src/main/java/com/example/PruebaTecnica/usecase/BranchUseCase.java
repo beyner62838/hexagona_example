@@ -3,7 +3,7 @@ package com.example.PruebaTecnica.usecase;
 import com.example.PruebaTecnica.exception.NotFoundException;
 import com.example.PruebaTecnica.model.Branch;
 import com.example.PruebaTecnica.model.event.BranchEvent;
-import com.example.PruebaTecnica.model.event.EventType;
+import com.example.PruebaTecnica.model.event.Enums.EventType;
 import com.example.PruebaTecnica.port.BranchRepositoryPort;
 import com.example.PruebaTecnica.port.EventPublisherPort;
 import com.example.PruebaTecnica.port.FranchiseRepositoryPort;

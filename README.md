@@ -113,4 +113,3 @@ Los eventos se publican en JSON (sin type headers). En **Kafka UI** puedes entra
 - `application`: arranque del backend + configuración de beans.
 
 ---
-Si quieres que el gateway también agregue auth (JWT) o rate limit, se le mete sin tocar el dominio.

@@ -1,5 +1,5 @@
 package com.example.PruebaTecnica.model.event;
-
+import com.example.PruebaTecnica.model.event.Enums.EventType;
 import lombok.*;
 
 @Data
