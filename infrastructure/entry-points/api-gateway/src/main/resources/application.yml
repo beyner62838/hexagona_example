@@ -19,6 +19,6 @@ spring:
 
       routes:
         - id: franquicias-backend
-          uri: "http:/franquicias_prueba_hexa-spring_backend:8080"
+          uri: "http://localhost:8082"
           predicates:
             - Path=/api/**
