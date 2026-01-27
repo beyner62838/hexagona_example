@@ -19,6 +19,6 @@ spring:
 
       routes:
         - id: franquicias-backend
-          uri: "http://localhost:8082"
+          uri: ${BACKEND_URL:http://localhost:8082}
           predicates:
             - Path=/api/**

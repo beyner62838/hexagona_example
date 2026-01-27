@@ -78,6 +78,7 @@ services:
     depends_on:
       - spring_backend
     environment:
-      - SERVER_PORT=8080
+      - SERVER_PORT=8081
+      - BACKEND_URL=http://spring_backend:8080
     ports:
-      - "8081:8080"
+      - "8081:8081"

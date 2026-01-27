@@ -1,7 +1,5 @@
 package com.example.PruebaTecnica.entrypoints.rest.dto;
-
 import lombok.*;
-
 @Data
 @Builder
 @NoArgsConstructor
